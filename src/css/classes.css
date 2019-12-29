@@ -1,0 +1,37 @@
+/*fonts*/
+
+.robotoSlab-r{
+	color: #555;
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.montserrat-r{
+	color: #555;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+
+/*other*/
+
+.underLine{
+
+	position: relative;
+}
+
+.underLine:after{
+	content: "";
+
+	width: 50px;
+	height: 2px;
+	background: #555;
+
+	position: absolute;
+	bottom: -30px;
+	left: calc(50% - 50px/2);
+}

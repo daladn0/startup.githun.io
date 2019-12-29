@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Startup</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/classes.css">
+	<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+	<!-- Sprite -->
+	<svg style="display: none";>
+
+		<symbol id='typography' viewBox="0 0 214 214">
+			<path d="M186.943,181L124.345,0H92.596L29.415,181H15v33h63v-33H67.775l10.688-32h59.026l10.39,32H137v33h62v-33H186.943z
+			 M127.579,118H88.404l19.981-68.271L127.579,118z"/>
+		</symbol>
+
+		<symbol id='code' viewBox="0 0 611.997 611.997">
+			<g>
+				<path d="M157.113,397.291L51.241,311.692l105.872-85.599c8.035-7.832,8.035-20.538,0-28.37c-8.036-7.832-21.048-7.832-29.084,0
+				L5.841,296.498c-4.283,4.181-6.098,9.729-5.812,15.195c-0.286,5.466,1.529,11.013,5.812,15.194l122.188,98.774
+				c8.036,7.831,21.048,7.831,29.084,0C165.148,417.829,165.148,405.123,157.113,397.291z M447.929,43.434
+				c-9.749-5.527-22.23-2.244-27.859,7.322l-254.941,491.26c-5.629,9.565-3.304,24.188,7.465,27.31
+				c13.176,3.813,22.231,2.243,27.86-7.322l254.94-491.26C461.043,61.157,457.698,48.94,447.929,43.434z M606.135,296.498
+				l-122.167-98.794c-8.036-7.832-21.048-7.832-29.084,0c-8.036,7.832-8.036,20.538,0,28.37l105.872,85.599l-105.872,85.599
+				c-8.036,7.832-8.036,20.538,0,28.37c8.035,7.831,21.048,7.831,29.084,0l122.188-98.774c4.283-4.181,6.099-9.729,5.812-15.194
+				C612.254,306.226,610.418,300.679,606.135,296.498z"/>
+			</g>
+		</symbol>
+
+		<symbol id='support' viewBox="0 0 204.992 204.992">
+			<path d="M204.991,102.496c0-17.626-4.557-35.018-13.177-50.296c-9.57-16.96-23.687-30.798-40.825-40.019
+			C136.177,4.212,119.408,0,102.496,0C84.954,0,67.634,4.517,52.407,13.061c-17.152,9.625-31.113,23.88-40.374,41.221
+			C4.161,69.024,0,85.696,0,102.496c0,18.234,4.857,36.147,14.045,51.804c0.001,0.002,0.002,0.005,0.004,0.007
+			c9.959,16.966,24.474,30.647,41.976,39.564c0.002,0.001,0.004,0.002,0.005,0.003c14.48,7.377,30.113,11.118,46.465,11.118
+			c18.319,0,36.306-4.9,52.015-14.169c16.777-9.9,30.339-24.278,39.22-41.578c0.002-0.004,0.004-0.009,0.006-0.013
+			C201.1,134.885,204.991,118.725,204.991,102.496z M22.98,139.034C17.741,127.631,15,115.155,15,102.496
+			c0-11.435,2.256-22.797,6.573-33.306l25.613,18.537c-1.285,4.804-1.934,9.75-1.934,14.769c0,5.826,0.863,11.523,2.572,17.006
+			l-17.49,13.751L22.98,139.034z M89.016,142.529c-0.002-0.001-0.004-0.002-0.005-0.002c-11.397-3.838-20.645-12.383-25.374-23.443
+			c-2.245-5.252-3.384-10.833-3.384-16.588c0-5.149,0.924-10.193,2.748-14.993l0-0.002c4.272-11.244,13.165-20.159,24.402-24.461
+			c4.83-1.85,9.908-2.787,15.092-2.787c5.232,0,10.356,0.956,15.229,2.841c11.06,4.279,19.864,13.074,24.156,24.13
+			c1.896,4.886,2.858,10.024,2.858,15.271c0,4.68-0.772,9.3-2.294,13.73c-3.852,11.208-12.303,20.338-23.188,25.05
+			c-0.001,0-0.001,0.001-0.002,0.001c-5.306,2.297-10.945,3.461-16.758,3.461C97.906,144.738,93.371,143.995,89.016,142.529z
+			 M182.687,67.465c4.797,10.991,7.304,22.944,7.304,35.03c0,11.077-2.006,21.76-5.974,31.864l-25.817-18.685
+			c1.022-4.312,1.538-8.725,1.538-13.18c0-5.219-0.702-10.359-2.092-15.343l22.645-17.803L182.687,67.465z M102.496,15
+			c11.54,0,22.998,2.295,33.583,6.686l-18.515,25.583c-9.812-2.682-20.375-2.678-30.184,0.013L67.673,22.215
+			C78.606,17.477,90.488,15,102.496,15z M102.496,189.992c-10.97,0-21.559-1.97-31.583-5.866l18.711-25.854
+			c4.216,0.975,8.526,1.466,12.873,1.466c5.902,0,11.673-0.887,17.226-2.644l9.881,12.568l9.635,12.255
+			C127.779,187.219,115.234,189.992,102.496,189.992z"/>
+		</symbol>
+
+	</svg>
+	
+	<!-- -------------------------------HEADER--------------------------- -->
+	<header class="header">
+		<div class="container">
+			<!-- header__top -->
+			<div class="header__top">
+				<div class="header__logo">
+					<a href="#" class="logo">Startup</a>
+				</div>
+
+				<!-- -----------header__adaptive------ -->
+				<a href="#" class="header__adaptive">
+					<span></span>
+				</a>
+				<!-- --------------------------------- -->
+
+				<nav class="header__nav">
+					<a href="#">Home</a>
+					<a href="#">Services</a>
+					<a href="#">About</a>
+					<a href="#">Works</a>
+					<a href="#">Blog</a>
+					<a href="#">Clients</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
+			<!-- header__bottom -->
+
+			<div class="header__bottom">
+				<div class="title montserrat-r">Welcome to startup</div>
+				<p class="robotoSlab-r">Your Favourite Creative Agency Template</p>
+				<button>Get started</button>
+			</div>
+
+		</div>
+	</header>
+
+	<!-- -------------------------------SERVICES--------------------------- -->
+
+	<div class="services">
+		<div class="container">
+			
+			<div class="services__top">
+				<p class="montserrat-r underLine">Services</p>
+				<p class="robotoSlab-r">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+			</div>
+
+			<div class="services__bottom">
+
+				<div class="item">
+					<div class="item__img">
+						<symbol>
+							<svg><use xlink:href="#typography"></use></svg>
+						</symbol>
+					</div>
+					<p class="montserrat-r title">Clean typography</p>
+					<p class="robotoSlab-r text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
+				</div>
+
+				<div class="item">
+					<div class="item__img">
+						<symbol>
+							<svg><use xlink:href="#code"></use></svg>
+						</symbol>
+					</div>
+					<p class="montserrat-r title">Rock Solid Code</p>
+					<p class="robotoSlab-r text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
+				</div>
+
+				<div class="item">
+					<div class="item__img">
+						<symbol>
+							<svg><use xlink:href="#support"></use></svg>
+						</symbol>
+					</div>
+					<p class="montserrat-r title">Expert Support</p>
+					<p class="robotoSlab-r text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
+				</div>
+
+			</div> <!--/.services__bottom-->
+
+		</div> <!--/.container-->
+	</div> <!--/.services-->
+
+	<!-- -------------------------------ABOUT--------------------------- -->
+
+	<div class="about">
+		<div class="container">
+					
+			<div class="about__top">
+				<p class="montserrat-r underLine">About Us</p>
+				<p class="robotoSlab-r">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+			</div>
+
+			<div class="about__bottom">
+				<div class="text">
+					<p class="robotoSlab-r">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.</p>
+					<p class="robotoSlab-r">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.</p>
+				</div>
+
+				<div class="team">
+					
+					<div class="buttons">
+						<a href="#"><img src="src/img/icon/left__arrow.png"></a>
+						<a href="#"><img src="src/img/icon/right_arrow.png"></a>
+					</div>
+
+					<div class="person">
+
+						<div class="img">
+							<img src="src/img/icon/person1.png">
+
+							<div class="social">
+								<a href="#" class="item">
+										<img src="src/img/icon/facebook-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/twitter-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/googlePlus-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/linkedin-logo.png">
+								</a>
+							</div>
+						</div>
+
+						<div class="name">
+							<p class="montserrat-r">Md.Khalil uddin</p>
+							<p class="robotoSlab-r">Head of ideas</p>
+						</div>
+
+					</div>
+
+					<div class="person">
+
+						<div class="img">
+							<img src="src/img/icon/person2.png">
+
+							<div class="social">
+								<a href="#" class="item">
+										<img src="src/img/icon/facebook-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/twitter-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/googlePlus-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/linkedin-logo.png">
+								</a>
+							</div>
+						</div>
+
+						<div class="name">
+							<p class="montserrat-r">Rubel Miah</p>
+							<p class="robotoSlab-r">Lead WordPress Developer</p>
+						</div>
+
+					</div>
+
+					<div class="person">
+
+						<div class="img">
+							<img src="src/img/icon/person3.png">
+
+							<div class="social">
+								<a href="#" class="item">
+										<img src="src/img/icon/facebook-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/twitter-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/googlePlus-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/linkedin-logo.png">
+								</a>
+							</div>
+						</div>
+
+						<div class="name">
+							<p class="montserrat-r">Shamim Mia</p>
+							<p class="robotoSlab-r">Sr. Web Developer</p>
+						</div>
+
+					</div>
+
+					<div class="person">
+
+						<div class="img">
+							<img src="src/img/icon/person4.png">
+
+							<div class="social">
+								<a href="#" class="item">
+										<img src="src/img/icon/facebook-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/twitter-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/googlePlus-logo.png">
+								</a>
+								<a href="#" class="item">
+										<img src="src/img/icon/linkedin-logo.png">
+								</a>
+							</div>
+						</div>
+
+						<div class="name">
+							<p class="montserrat-r">John Doe</p>
+							<p class="robotoSlab-r">Front end Developer</p>
+						</div>
+
+					</div>
+
+				</div> <!--/.team-->
+			</div> <!--/.about__bottom-->
+		</div> <!--/.container-->
+	</div> <!--/.about-->
+
+	<!-- -------------------------------WORKS--------------------------- -->
+
+	<div class="works">
+		<div class="container">
+
+			<div class="works__top">
+				<p class="montserrat-r underLine">Latest works</p>
+
+				<div class="works__nav">
+					<a href="#" class="robotoSlab-r">All</a>
+					<a href="#" class="robotoSlab-r">Branding</a>
+					<a href="#" class="robotoSlab-r">Design</a>
+					<a href="#" class="robotoSlab-r">Development</a>
+					<a href="#" class="robotoSlab-r">Strategy</a>
+					<a href="#" class="robotoSlab-r filter">Filter</a>
+				</div>
+			</div>		
+			
+			<div class="works__bottom">
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works1.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works2.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works3.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works4.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works5.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works6.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works7.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works8.png">
+				</div>
+				<div class="item">
+					<div class="wrapper">
+						<p class="montserrat-r">Hair Dresser</p>
+						<p class="robotoSlab-r">Branding</p>
+						<a href="#" class="wrapper__link robotoSlab-r">View<img src="src/img/icon/right_arrow2.png"></a>
+					</div>
+					<img src="src/img/icon/works9.png">
+				</div>
+			</div> <!--/.works__bottom-->
+
+		</div> <!--/.container-->
+	</div> <!--/.works-->
+
+	<!-- -------------------------------Parallax--------------------------- -->
+
+	<div class="parallax">
+		<div class="container">
+			<p class="robotoSlab-r">Do you like OUR WORK so far?</p>
+			<p class="robotoSlab-r">Let's talk about YOUR PROJECT!</p>
+			<button>Get in touch</button>
+		</div>
+	</div>
+
+
+	<!-- -------------------------------BLOG--------------------------- -->
+
+	<div class="blog">
+		<div class="container">
+			<!-- blog__top -->
+			<div class="blog__top">
+				<p class="montserrat-r underLine">Recent blog posts</p>
+				<p class="robotoSlab-r">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+			</div>		
+			<!-- blog__bottom -->
+
+			<div class="blog__bottom">
+				<div class="item">
+					<!-- img -->
+					<div class="img">
+						<img src="src/img/icon/blog1.png">			
+					</div>
+					<!-- text -->
+					<div class="text">
+						<div class="text__top">
+							<div class="date">
+								<p>18</p>
+								<p>oct</p>		
+							</div>
+
+							<div class="title">
+								<p class="montserrat-r">Startup ideas needs to be funded</p>
+								<p class="robotoSlab-r">By <span>Khalil</span> Uddin in <span>Development</span></p>
+							</div>
+						</div>
+
+						<div class="text__bottom">
+							<p class="robotoSlab-r">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam </p>
+							<a href="#" class="robotoSlab-r">Read more</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<!-- img -->
+					<div class="img">
+						<img src="src/img/icon/blog2.png">						
+					</div>
+					<!-- text -->
+					<div class="text">
+						<div class="text__top">
+							<div class="date">
+								<p>18</p>
+								<p>oct</p>		
+							</div>
+
+							<div class="title">
+								<p class="montserrat-r">Startup ideas needs to be funded</p>
+								<p class="robotoSlab-r">By <span>Khalil</span> Uddin in <span>Development</span></p>
+							</div>
+						</div>
+
+						<div class="text__bottom">
+							<p class="robotoSlab-r">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam </p>
+							<a href="#" class="robotoSlab-r">Read more</a>
+						</div>
+					</div>
+				</div>
+
+			</div> <!--/.blog__bottom-->
+
+		</div> <!--/.container-->
+	</div>	<!--/.blog-->
+
+	<!-- -------------------------------CLIENTS--------------------------- -->
+
+	<div class="clients">
+		<div class="container">
+			
+			<div class="logos">
+				<div class="item"><img src="src/img/icon/clients1.png"></div>
+				<div class="item"><img src="src/img/icon/clients2.png"></div>
+				<div class="item"><img src="src/img/icon/clients3.png"></div>
+				<div class="item"><img src="src/img/icon/clients4.png"></div>
+				<div class="item"><img src="src/img/icon/clients5.png"></div>
+			</div>
+
+			<div class="text">
+				<p class="robotoSlab-r">Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p><p class="robotoSlab-r">Temporibus autem quibusdam et aut officiis debitis aut rerum”</p>
+				<p class="robotoSlab-r">John Doe,Google Inc</p>
+
+				<div class="slider">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+			</div>
+
+		</div> <!--/.container-->
+	</div> <!--/.clients-->
+
+	<!-- -------------------------------CONTACT--------------------------- -->
+
+	<div class="contact">
+		<div class="container">
+			<div class="contact__top">
+				<p class="montserrat-r underLine">Get in touch</p>
+				<p class="robotoSlab-r">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+			</div>
+
+			<div class="contact__bottom">
+
+				<div class="contact__text">
+					<div class="item">
+						<div class="icon">
+							<img src="src/img/icon/contact1.png">
+						</div>
+
+						<div class="text">
+							<p class="montserrat-r">Adress</p>
+							<p class="robotoSlab-r">312, 7th Ave, New York</p>
+							<p class="robotoSlab-r">NY 101200, United States of America</p>
+						</div>
+					</div>
+
+					
+					<div class="item">
+						<div class="icon">
+							<img src="src/img/icon/contact2.png">
+						</div>
+
+						<div class="text">
+							<p class="montserrat-r">Hotline(24x7)</p>
+							<p class="robotoSlab-r">+65 0052 300, +65 88251 210</p>
+							<p class="robotoSlab-r">+88 01723 511 340</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="icon">
+							<img src="src/img/icon/contact3.png">
+						</div>
+
+						<div class="text">
+							<p class="montserrat-r">E-Mail</p>
+							<p class="robotoSlab-r">shapedtheme@gmail.com</p>
+							<p class="robotoSlab-r">khalilkode@gmail.com</p>
+						</div>
+					</div>
+				</div> <!--/.contact__text-->
+
+				<div class="contact__form">
+					<form action="index.html" method="POST">
+						<input type="text" placeholder="Your name" class="robotoSlab-r">
+						<input type="text" placeholder="Your E-Mail" class="robotoSlab-r">
+						<input type="text" placeholder="Your Subject" class="robotoSlab-r">
+						<input type="text" placeholder="Your Company Name" class="robotoSlab-r">
+
+						<textarea placeholder="Write you message" class="robotoSlab-r"></textarea>
+						
+						<div class="submit">
+							<button class="robotoSlab-r">Send message</button>
+							<p class="robotoSlab-r"><span>*</span>We'll contact as as posible.We don't reply on Monday.</p>
+						</div>
+					</form>
+				</div>
+			</div> <!--/.contact__bottom-->
+		</div><!--/.container-->
+	</div> <!--/.contact-->
+
+	<!-- -------------------------------FOOTER--------------------------- -->
+
+	<footer class="footer">
+		<div class="container">		
+			
+			<div class="social underLine">
+				<div class="item"><img src="src/img/icon/social1.png"></div>
+				<div class="item"><img src="src/img/icon/social1.png"></div>
+				<div class="item"><img src="src/img/icon/social1.png"></div>
+				<div class="item"><img src="src/img/icon/social1.png"></div>
+			</div>
+			<p class="robotoSlab-r"><span>&copy;</span>2019 Startup, Designed by daladn0</p>
+
+		</div>
+	</footer>
+ 
+</body>
+</html>  
